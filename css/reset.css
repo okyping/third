@@ -1,0 +1,124 @@
+/**
+ * @file css reset
+ * 标签使用不常用的ins标签，必要时有a标签，input标签，textarea标签，form标签
+ * @author yanping(okyping)
+ */
+/**
+ * 假设最外层标签命名为third-wrap，且为ins标签
+ * 先对所有标签进行统一的重置
+ */
+#third-wrap,
+#third-wrap ins,
+#third-wrap input,
+#third-wrap textarea,
+#third-wrap a,
+#third-wrap form
+{
+    /**
+     * width: 100%;
+     */
+    width: auto;
+    height: auto;
+
+    /**
+     * margin: 0 auto;
+     */
+    margin: 0;
+    padding: 0;
+
+    background-color: transparent;
+    background-position: 0% 0%; 
+    background-size: auto; 
+    background-repeat: repeat;
+    background-origin: padding-box; 
+    background-clip: border-box; 
+    background-attachment: scroll; 
+    background-image: none;
+
+    border: none;
+    outline: invert none medium;
+
+    color: #000;
+    direction: ltr;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+    text-transform: none;
+    white-space: normal;
+    word-spacing: normal;
+
+    font-size: 12px;
+    font-family: Tahoma,"宋体",Helvetica,sans-serif;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: inherit;
+
+    visibility: inherit;
+    overflow:  visible;
+
+    list-style: none;
+
+    float: none;
+    /**
+     * clear: both;
+     */
+    clear: none;
+
+    position: static;
+    top: auto;
+    left: auto;
+
+    vertical-align: baseline;
+
+    -moz-box-sizing: content-box;  
+    -webkit-box-sizing: content-box; 
+    -o-box-sizing: content-box; 
+    -ms-box-sizing: content-box; 
+    box-sizing: content-box;
+}
+
+/**
+ * 分别重置标签的display属性样式
+ */
+#third-wrap {
+    display: block;
+}
+#third-wrap ins
+{
+    display: block;
+}
+
+#third-wrap a{
+    display: inline;
+}
+#third-wrap input{
+    display: inline-block;
+}
+#third-wrap textarea{
+    display: inline-block;
+}
+#third-wrap form{
+    display: block;
+}
+/**
+ * 重置伪类
+ */
+#third-wrap::before,
+#third-wrap::after,
+#third-wrap ins::before,
+#third-wrap ins::after,
+#third-wrap a::before,
+#third-wrap a::after,
+#third-wrap input::before,
+#third-wrap input::after,
+#third-wrap textarea::before,
+#third-wrap textarea::after,
+#third-wrap form::before,
+#third-wrap form::after
+{
+    content: "";
+}
